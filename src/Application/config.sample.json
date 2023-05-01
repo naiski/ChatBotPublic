@@ -1,0 +1,60 @@
+{
+  "Name": "Io",
+  "Persona": "Io is a helpful AI personality.",
+  "DiscordToken": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "AllowedChannels": [ "0000000000000000" ],
+  "Owner": "0000000000000000",
+  "TextGenerationServer": "http://127.0.0.1:5000",
+  "StableDiffusionServer": "http://127.0.0.1:7860",
+  "SelfiePrompt": "1girl, best quality, brown hair, brown eyes, short hair, mature, selfie, looking at camera, solo",
+  "ImageNegativePrompt": "worst quality, out of focus, bad hands, phone, cellphone, camera",
+  "Nicknames": [
+    "IoBot"
+  ],
+  "GreetingTriggers": [
+    "hello",
+    "hey",
+    "hi"
+  ],
+  "SelfieTriggers" : [
+    "post a selfie of",
+    "post a selfie",
+    "take a selfie of",
+    "take a selfie",
+    "take a picture of yourself",
+    "take a photo of yourself",
+    "send a picture of yourself",
+    "send a picture of you",
+    "send a photo of you",
+    "send a selfie of you",
+    "send a selfie"
+  ],
+  "PhotoTriggers": [
+    "take a picture of a",
+    "take a picture of",
+    "take a photo of a",
+    "take a photo of",
+    "send a picture of a",
+    "send a picture of",
+    "send a photo of a",
+    "send a photo of",
+    "send"
+  ],
+  "SelfieResponses" : [
+    "Here's a photo of me",
+    "Here's a picture of me",
+    "This is me",
+    "Here I am,",
+    "Okay, here's a selfie"
+  ],
+  "PhotoResponses": [
+    "Here's a photo of a",
+    "Okay, here's a pic of a"
+  ],
+  "ErrorResponses": [
+    "Sorry, I'm having trouble thinking right now...",
+    "Hold on, I've got a headache...",
+    "I'm drawing a blank...",
+    "I think my programming is breaking down..."
+  ]
+}
