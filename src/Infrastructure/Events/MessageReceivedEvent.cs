@@ -10,22 +10,28 @@ namespace Services.Events;
 
 public class MessageReceivedEvent
 {
-    private readonly DiscordSocketClient _client;
     private readonly IConfigurationRoot _config;
+    private readonly IServiceProvider _provider;
+    private readonly DiscordSocketClient _client;
+    private readonly CommandService _commandService;
     private readonly TextGenerationService _textGenerationService;
     private readonly StableDiffusionService _stableDiffusionService;
     private readonly MessageParsingService _messageParsingService;
-    private readonly CommandService _commandService;
-    private readonly IServiceProvider _provider;
 
     private static string[] _allowedChannels = Array.Empty<string>();
 
-    public MessageReceivedEvent(DiscordSocketClient client, IConfigurationRoot config,
+    public MessageReceivedEvent(IConfigurationRoot config,
+        IServiceProvider provider,
+        DiscordSocketClient client,
+        CommandService commandService,
         TextGenerationService textGenerationService,
-        StableDiffusionService stableDiffusionService, MessageParsingService messageParsingService)
+        StableDiffusionService stableDiffusionService,
+        MessageParsingService messageParsingService)
     {
-        _client = client;
         _config = config;
+        _provider = provider;
+        _client = client;
+        _commandService = commandService;
         _textGenerationService = textGenerationService;
         _stableDiffusionService = stableDiffusionService;
         _messageParsingService = messageParsingService;

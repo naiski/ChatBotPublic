@@ -19,10 +19,10 @@ public class MessageParsingService
     private static string[] _selfieTriggers = Array.Empty<string>();
     private static string[] _photoTriggers = Array.Empty<string>();
 
-    public MessageParsingService(DiscordSocketClient client, IConfigurationRoot config)
+    public MessageParsingService(IConfigurationRoot config, DiscordSocketClient client)
     {
-        _client = client;
         _config = config;
+        _client = client;
 
         // Load trigger strings from config
         _nicknames = (_config.GetSection("Nicknames").Get<string[]>() ?? Array.Empty<string>())

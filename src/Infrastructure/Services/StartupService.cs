@@ -8,20 +8,22 @@ namespace ChatBot.Services;
 
 public class StartupService
 {
-    private readonly DiscordSocketClient _client;
     private readonly IConfigurationRoot _config;
-    private readonly CommandService _commandService;
     private readonly IServiceProvider _provider;
+    private readonly DiscordSocketClient _client;
+    private readonly CommandService _commandService;
 
     public static readonly CancellationTokenSource Cts = new();
 
-    public StartupService(DiscordSocketClient client, IConfigurationRoot config, CommandService commandService,
-        IServiceProvider provider)
+    public StartupService(IConfigurationRoot config,
+        IServiceProvider provider,
+        DiscordSocketClient client,
+        CommandService commandService)
     {
-        _client = client;
         _config = config;
-        _commandService = commandService;
         _provider = provider;
+        _client = client;
+        _commandService = commandService;
     }
 
     /// <summary>
